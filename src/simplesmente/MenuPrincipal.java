@@ -41,7 +41,7 @@ public class MenuPrincipal {
 				System.out.println("digite o valor inteiro a"
 						+ " ser removido da lista:");
 				valor = scan.nextInt();
-				if (lista.removerNo(valor)){
+				if (lista.removerNo_2(valor)){
 					System.out.println("o valor foi removido com sucesso!");
 				}else{
 					System.out.println("o valor n�o est� na lista");

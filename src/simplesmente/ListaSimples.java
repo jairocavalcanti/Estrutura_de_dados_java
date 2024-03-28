@@ -34,6 +34,7 @@ public class ListaSimples {
 	public boolean eVazia (){
 		return (this.prim == null);
 	}
+	
 	//insere um novo n� no final da lista ou se a lista estiver vazia, insere o primeiro n� na lista
 	public void inserirUltimo (Item elem){
 		No novoNo = new No (elem);
@@ -45,6 +46,7 @@ public class ListaSimples {
 		this.ult = novoNo;
 		this.quantNos++;
 	}
+	
 	//retorna o endere�o do n� que est� contendo o valor a ser procurado.
 	public No pesquisarNo (int chave){
 		No atual = this.prim;
@@ -53,6 +55,7 @@ public class ListaSimples {
 		}	
 		return atual;
 	}
+	
 	//remove um determinado n� em qualquer posi��o na lista.
 	public boolean removerNo_1 (int chave) {
 		No atual = this.prim;
@@ -84,8 +87,9 @@ public class ListaSimples {
 			}
 		}
 	}
+	
 	//outra forma de escrever o m�todo para remover determinado N�
-	public boolean removerNo(int x){
+	public boolean removerNo_2(int x){
 		if (this.eVazia()){
 			return false;
 		}else{
@@ -117,6 +121,7 @@ public class ListaSimples {
 
 		}
 	}
+	
 	//mostra todo o conte�do da lista
 	public String toString(){
 		String msg = "";
@@ -126,6 +131,25 @@ public class ListaSimples {
 			atual = atual.getProx();
 		}
 		return msg;
+	}
+
+	public int calcularSoma(){
+		// inicializa a variavel que irá somar os valores
+		int soma = 0;
+		// verifica se a lista está vazia
+		if(this.eVazia()){
+			return 0;
+		}else{
+			// se nao estiver, inicializamos o primeiro nó da lista
+			No atual = this.prim;
+			// enquanto este nó estiver nulo a soma seria feita
+			while(atual != null){
+				soma += atual.getInfo().getChave();
+				atual = atual.getProx();
+			}
+		// retornando valores somados     
+		return soma; 
+		}
 	}
 
 }
