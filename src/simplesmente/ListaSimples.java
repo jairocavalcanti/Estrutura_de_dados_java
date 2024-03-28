@@ -152,4 +152,18 @@ public class ListaSimples {
 		}
 	}
 
+	public double calcularmedia(){
+		double soma = 0;
+		if (this.eVazia()){
+			return 0;
+		}else{
+			No atual = this.prim;
+			while(atual != null){
+				soma += atual.getInfo().getChave();
+				atual = atual.getProx();
+			}
+		    return soma/this.quantNos;
+		}
+	}
+
 }
