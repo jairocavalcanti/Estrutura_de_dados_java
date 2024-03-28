@@ -2,7 +2,7 @@ package simplesmente;
 
 import dados.Item;
 
-public class Questão_7 {
+public class Questao_7 {
     public static void main(String[] args) {
         ListaSimples lis = new ListaSimples();
 
