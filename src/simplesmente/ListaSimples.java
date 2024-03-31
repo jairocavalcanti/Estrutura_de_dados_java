@@ -225,4 +225,29 @@ public class ListaSimples {
 			return false; // Retorna false se o valor não foi encontrado na lista
 		}
 	}
+
+	public int procurarOuInserir(int valor) {
+		if (this.eVazia()) { // Se a lista está vazia, insere o valor no final da lista
+			this.inserirUltimo(new Item(valor));
+			return 1; // Retorna a quantidade de vezes que o valor aparece na lista (que neste caso é 1, pois acabou de ser inserido)
+		} else {
+			int quantidade = 0;
+			No atual = this.prim;
+	
+			while (atual != null) {
+				if (atual.getInfo().getChave() == valor) {
+					quantidade++; // Incrementa a quantidade sempre que encontra o valor na lista
+				}
+				atual = atual.getProx();
+			}
+	
+			if (quantidade == 0) { // Se o valor não foi encontrado na lista, insere no final da lista
+				this.inserirUltimo(new Item(valor));
+				return 1; // Retorna 1, pois o valor foi inserido uma vez
+			} else {
+				return quantidade; // Retorna a quantidade de vezes que o valor aparece na lista
+			}
+		}
+	}
+
 }
