@@ -166,4 +166,63 @@ public class ListaSimples {
 		}
 	}
 
+	public void imprimirNumerosPares() {
+		if (this.eVazia()) {
+			System.out.println("A lista está vazia.");
+		} else {
+			No atual = this.prim;
+			while (atual != null) {
+				if (atual.getInfo().getChave() % 2 == 0) {
+					System.out.println("Número par: " + atual.getInfo().getChave());
+				}
+				atual = atual.getProx();
+			}
+		}
+	}
+	
+	public boolean saoIdenticas(ListaSimples L1, ListaSimples L2) {
+		// Verificando se as duas listas têm o mesmo número de nós
+		if (L1.getQuantNos() != L2.getQuantNos()) {
+			return false;
+		} else {
+			// Inicializando os nós atuais para percorrer as duas listas
+			No atualLista1 = L1.getPrim();
+			No atualLista2 = L2.getPrim();
+			
+			// Percorrendo ambas as listas ao mesmo tempo
+			while (atualLista1 != null && atualLista2 != null) {
+				// Verificando se os elementos dos nós atuais são diferentes
+				if (atualLista1.getInfo().getChave() != atualLista2.getInfo().getChave()) {
+					return false; // Se forem diferentes, as listas não são idênticas
+				}
+				// Movendo para o próximo nó em ambas as listas
+				atualLista1 = atualLista1.getProx();
+				atualLista2 = atualLista2.getProx();
+			}
+			// Se ambas as listas foram completamente percorridas sem encontrar diferenças, elas são idênticas
+			// Retornando true indicando que as listas são idênticas
+			return true;
+		}
+	}
+	
+	public boolean procurarValor(int valor) {
+		if (this.eVazia()) {
+			System.out.println("A lista está vazia.");
+			return false;
+		} else {
+			No atual = this.prim;
+	
+			while (atual != null) {
+				if (atual.getInfo().getChave() == valor) {
+					atual.getInfo().setChave(50);
+					System.out.println("Valor " + valor + " substituído por 50 na lista.");
+					return true; // Retorna true se o valor foi encontrado e alterado
+				}
+				atual = atual.getProx();
+			}
+	
+			System.out.println("Valor não encontrado na lista.");
+			return false; // Retorna false se o valor não foi encontrado na lista
+		}
+	}
 }
