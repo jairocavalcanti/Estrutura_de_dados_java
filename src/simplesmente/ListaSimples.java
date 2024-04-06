@@ -262,7 +262,7 @@ public class ListaSimples {
 		}
 	}
 	
-	public void adicionar_8(){
+	public void adicionar_primeiro_numero(){
 		if(this.eVazia()){
 			return;
 		}else{
