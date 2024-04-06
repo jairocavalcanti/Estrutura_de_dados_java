@@ -7,9 +7,9 @@ public class Questao_7 {
         ListaSimples lis = new ListaSimples();
 
         lis.inserirUltimo(new Item(10));
-        lis.inserirUltimo(new Item(20));
-        lis.inserirUltimo(new Item(30));
-        lis.inserirUltimo(new Item(40));
+        lis.inserirUltimo(new Item(10));
+        lis.inserirUltimo(new Item(10));
+        lis.inserirUltimo(new Item(10));
 
         System.out.println("Lista criada: \n " + lis.toString());
 

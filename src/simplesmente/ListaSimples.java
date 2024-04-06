@@ -136,19 +136,16 @@ public class ListaSimples {
 	public int calcularSoma(){
 		// inicializa a variavel que irá somar os valores
 		int soma = 0;
-		// verifica se a lista está vazia
+		
 		if(this.eVazia()){
 			return 0;
 		}else{
-			// se nao estiver, inicializamos o primeiro nó da lista
 			No atual = this.prim;
-			// enquanto este nó estiver nulo a soma seria feita
 			while(atual != null){
 				soma += atual.getInfo().getChave();
 				atual = atual.getProx();
 			}
-		// retornando valores somados     
-		return soma; 
+		    return soma;
 		}
 	}
 
@@ -250,4 +247,57 @@ public class ListaSimples {
 		}
 	}
 
+	public void adicionar_5(){
+		if(this.eVazia()){
+			return;
+		}else{
+			No atual = this.prim;
+			while(atual != null){
+				if(atual.getProx() == null){
+					atual.getInfo().setChave(5);
+					break;
+				}
+				atual = atual.getProx();
+			}
+		}
+	}
+	
+	public void adicionar_8(){
+		if(this.eVazia()){
+			return;
+		}else{
+			No atual = this.prim;
+			while(atual != null){
+				if(atual.getInfo().getChave() == 3){
+					No novoNo = new No(new Item(8));
+					novoNo.setProx(this.prim);
+					this.prim = novoNo;
+				    break;
+				}
+            atual = atual.getProx();
+			}
+		}
+		
+	}
+	
+	public void somaPar(){
+		if(this.eVazia()){
+			return;
+		}else{
+			No atual = this.prim;
+			int soma = 0;
+			while(atual != null){
+				if(atual.getInfo().getChave() % 2 == 0){
+					soma += atual.getInfo().getChave();
+				}
+			atual = atual.getProx();
+			}
+	    System.out.println("Soma -- " + soma);
+		No novoNo = new No(new Item(soma));
+		this.ult.setProx(novoNo);
+		this.ult = novoNo;
+	    }    
+	}
+
+	
 }
