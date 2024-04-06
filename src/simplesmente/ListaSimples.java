@@ -247,14 +247,14 @@ public class ListaSimples {
 		}
 	}
 
-	public void adicionar_5(){
+	public void substituir_ultimo_numero(int chave){
 		if(this.eVazia()){
 			return;
 		}else{
 			No atual = this.prim;
 			while(atual != null){
 				if(atual.getProx() == null){
-					atual.getInfo().setChave(5);
+					atual.getInfo().setChave(chave);
 					break;
 				}
 				atual = atual.getProx();
