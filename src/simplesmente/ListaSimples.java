@@ -280,7 +280,7 @@ public class ListaSimples {
 		
 	}
 	
-	public void somaPar(){
+	public void somaPar_e_inserir_em_ultimo(){
 		if(this.eVazia()){
 			return;
 		}else{
