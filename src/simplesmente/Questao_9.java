@@ -10,9 +10,9 @@ public class Questao_9 {
         lis.inserirUltimo(new Item(20));
         lis.inserirUltimo(new Item(30));
         lis.inserirUltimo(new Item(40));
-    
+
         System.out.println("Números Pares:");
         lis.imprimirNumerosPares();
     }
-    
+
 }

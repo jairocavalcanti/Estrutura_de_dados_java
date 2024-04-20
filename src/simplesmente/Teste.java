@@ -15,8 +15,6 @@ public class Teste {
         lis.substituir_ultimo_numero(10);
         System.out.printf(lis.toString());
 
-        
-    
-}
-    
+    }
+
 }

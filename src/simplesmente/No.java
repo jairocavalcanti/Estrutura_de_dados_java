@@ -3,24 +3,28 @@ package simplesmente;
 import dados.Item;
 
 public class No {
-	private Item info; // a declaração do tipo Item está no capitulo 1
+	private Item info; // a declaraï¿½ï¿½o do tipo Item estï¿½ no capitulo 1
 	private No prox;
 
-	public No (Item elem){  // a variável elem contém os dados que serão armazenados
+	public No(Item elem) { // a variï¿½vel elem contï¿½m os dados que serï¿½o armazenados
 		this.info = elem;
-		this.prox = null; // esta linha é opcional, pois o prox é automaticamente 
-						//definido como null
+		this.prox = null; // esta linha ï¿½ opcional, pois o prox ï¿½ automaticamente
+							// definido como null
 	}
-	public Item getInfo (){
+
+	public Item getInfo() {
 		return this.info;
 	}
-	public void setInfo(Item elem){
+
+	public void setInfo(Item elem) {
 		this.info = elem;
 	}
-	public No getProx(){
+
+	public No getProx() {
 		return this.prox;
 	}
-	public void setProx(No novoNo){
+
+	public void setProx(No novoNo) {
 		this.prox = novoNo;
 	}
 
