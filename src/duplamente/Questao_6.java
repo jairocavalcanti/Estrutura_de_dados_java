@@ -2,6 +2,11 @@ package duplamente;
 
 import dados.Item;
 
+/*
+  Faça um método para concatenar duas listas duplamente encadeadas. A segunda lista ficará
+  vazia. As listas não estão vazias.
+*/
+
 public class Questao_6 {
     public static void main(String[] args) {
        ListaDupla listadupla = new ListaDupla();
@@ -17,8 +22,10 @@ public class Questao_6 {
     
        listadupla.concatenarListas_02(listadupla_02);
 
-       System.out.println("Lista 1: \n" + listadupla.toString());
-       System.out.println("Lista 2: " + listadupla_02.toString());
+       System.out.println("Listas concatenadas: \n" + listadupla.toString());
+       System.out.println("Lista 2:" + listadupla_02.toString());
+
+       
     }
 
 }
