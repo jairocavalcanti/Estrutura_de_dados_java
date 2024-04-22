@@ -110,6 +110,28 @@ public class ListaDupla {
         lista2.quantNos = 0;
     }
 
+    // Outra forma de concatenar listas
+    public void concatenarListas_02(ListaDupla lista2){
+
+        if(lista2.prim != null){
+
+            if(this.ult != null){
+                this.ult.setProx(lista2.prim);
+            }else{
+                this.prim = lista2.prim;
+            }
+
+            this.ult = lista2.ult;
+            this.quantNos += lista2.quantNos;
+
+            lista2.prim = null;
+			lista2.ult = null;
+			lista2.quantNos = 0;
+        }else{
+            System.out.println("Lista 2 está vazia! ");
+        }
+    }
+
     // atividade 04 - questão 07
     public ListaDupla partirLista() {
         ListaDupla lista2 = new ListaDupla();
