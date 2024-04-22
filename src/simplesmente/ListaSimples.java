@@ -42,8 +42,8 @@ public class ListaSimples {
 		return (this.prim == null);
 	}
 
-	// insere um novo n� no final da lista ou se a lista estiver vazia, insere o
-	// primeiro n� na lista
+	// insere um novo nó no final da lista ou se a lista estiver vazia, insere o
+	// primeiro nó na lista
 	public void inserirUltimo(Item elem) {
 		No novoNo = new No(elem);
 		if (this.eVazia()) {
@@ -55,7 +55,7 @@ public class ListaSimples {
 		this.quantNos++;
 	}
 
-	// retorna o endere�o do n� que est� contendo o valor a ser procurado.
+	// retorna o endereço do nó que está contendo o valor a ser procurado.
 	public No pesquisarNo(int chave) {
 		No atual = this.prim;
 		while ((atual != null) && (atual.getInfo().getChave() != chave)) {
@@ -64,7 +64,7 @@ public class ListaSimples {
 		return atual;
 	}
 
-	// remove um determinado n� em qualquer posi��o na lista.
+	// remove um determinado nó em qualquer posição na lista.
 	public boolean removerNo_1(int chave) {
 		No atual = this.prim;
 		No ant = null;
@@ -95,16 +95,16 @@ public class ListaSimples {
 		}
 	}
 
-	// outra forma de escrever o m�todo para remover determinado N�
+	// outra forma de escrever o método para remover determinado Nó
 	public boolean removerNo_2(int x) {
 		if (this.eVazia()) {
 			return false;
 		} else {
 			if (this.prim.getInfo().getChave() == x) {
-				if (this.prim.getProx() == null) {// se for �nico n� da lista
+				if (this.prim.getProx() == null) {// se for único nó da lista
 					this.ult = null;
 				}
-				// remover o primeiro n� da lista
+				// remover o primeiro nó da lista
 				this.prim = this.prim.getProx();
 			} else {
 				No atual = this.prim;
@@ -112,13 +112,13 @@ public class ListaSimples {
 						(atual.getProx().getInfo().getChave() != x)) {
 					atual = atual.getProx();
 				}
-				if (atual.getProx() == null) {// n�o achou o valor na lista
+				if (atual.getProx() == null) {// não achou o valor na lista
 					return false;
 				} else {
-					if (atual.getProx() == this.ult) {// se for o �ltimo n�
+					if (atual.getProx() == this.ult) {// se for o último nó
 						atual.setProx(null);
 						this.ult = atual;
-					} else { // remove o n� no meio da lista
+					} else { // remove o nó no meio da lista
 						atual.setProx(atual.getProx().getProx());
 					}
 				}
@@ -129,7 +129,7 @@ public class ListaSimples {
 		}
 	}
 
-	// mostra todo o conte�do da lista
+	// mostra todo o conteúdo da lista
 	public String toString() {
 		String msg = "";
 		No atual = this.prim;

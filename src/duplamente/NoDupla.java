@@ -4,7 +4,7 @@ import dados.Item;
 
 public class NoDupla {
 
-    private Item info; // o tipo Item est� declarado no capitulo 1
+    private Item info; // o tipo Item está declarado no capitulo 1
     private NoDupla prox;
     private NoDupla ant;
 

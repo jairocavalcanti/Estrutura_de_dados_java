@@ -14,10 +14,10 @@ public class MenuPrincipal {
 		int valor;
 		Item item;
 		do {
-			System.out.println("escolha uma op��o:\n"
-					+ "1. inserir n� no final da lista\n"
+			System.out.println("escolha uma opção:\n"
+					+ "1. inserir nó no final da lista\n"
 					+ "2. pesquisar se um determinado valor\n"
-					+ "3. remover um determinado n� da lista\n"
+					+ "3. remover um determinado nó da lista\n"
 					+ "4. sair do programa");
 			opcao = scan.next().charAt(0);
 			switch (opcao) {
@@ -26,16 +26,16 @@ public class MenuPrincipal {
 					valor = scan.nextInt();
 					item = new Item(valor);
 					lista.inserirUltimo(item);
-					System.out.println("opera��o realizada com sucesso!");
+					System.out.println("operação realizada com sucesso!");
 					break;
 				case '2':
 					System.out.println("digite o valor inteiro a"
 							+ " ser procurado na lista:");
 					valor = scan.nextInt();
 					if (lista.pesquisarNo(valor) != null) {
-						System.out.println("o valor est� na lista");
+						System.out.println("o valor está na lista");
 					} else {
-						System.out.println("o valor n�o est� na lista");
+						System.out.println("o valor não está na lista");
 					}
 					break;
 				case '3':
@@ -45,14 +45,14 @@ public class MenuPrincipal {
 					if (lista.removerNo_2(valor)) {
 						System.out.println("o valor foi removido com sucesso!");
 					} else {
-						System.out.println("o valor n�o est� na lista");
+						System.out.println("o valor não está na lista");
 					}
 					break;
 				case '4':
 					System.out.println("fim");
 					break;
 				default:
-					System.out.println("op��o inv�lida");
+					System.out.println("opção inválida");
 			}
 		} while (opcao != '4');
 	}

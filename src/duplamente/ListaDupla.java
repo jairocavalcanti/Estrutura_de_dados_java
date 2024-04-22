@@ -42,8 +42,8 @@ public class ListaDupla {
         return (this.prim == null);
     }
 
-    // insere um novo n� no final da lista ou se a lista estiver vazia, insere
-    // o primeiro n� na lista
+    // insere um novo nó no final da lista ou se a lista estiver vazia, insere
+    // o primeiro nó na lista
     public void inserirUltimo(Item elem) {
         NoDupla novoNo = new NoDupla(elem);
         if (this.eVazia())
@@ -56,7 +56,7 @@ public class ListaDupla {
         this.quantNos++;
     }
 
-    // retorna o endere�o do n� que est� contendo o valor a ser procurado.
+    // retorna o endereço do nó que está contendo o valor a ser procurado.
     public NoDupla pesquisarNo(int chave) {
         NoDupla atual = this.prim;
         while ((atual != null) && (atual.getInfo().getChave() != chave))
@@ -64,7 +64,7 @@ public class ListaDupla {
         return atual;
     }
 
-    // remove um determinado n� em qualquer posi��o na lista.
+    // remove um determinado nó em qualquer posição na lista.
     public boolean removerNo(int chave) {
         NoDupla atual = this.prim;
         while ((atual != null) && (atual.getInfo().getChave() != chave)) {
@@ -74,7 +74,7 @@ public class ListaDupla {
             return false;
         else if (atual == this.prim) {
             this.prim = prim.getProx();
-            if (this.prim == null) // se a lista tem somente um n�
+            if (this.prim == null) // se a lista tem somente um nó
                 this.ult = null;
             else
                 this.prim.setAnt(null);
@@ -99,7 +99,7 @@ public class ListaDupla {
         return msg;
     }
 
-    // atividade 04 - quest�o 06
+    // atividade 04 - questão 06
     public void concatenarListas(ListaDupla lista2) {
         lista2.prim.setAnt(this.ult);
         this.ult.setProx(lista2.prim);
@@ -110,7 +110,7 @@ public class ListaDupla {
         lista2.quantNos = 0;
     }
 
-    // atividade 04 - quest�o 07
+    // atividade 04 - questão 07
     public ListaDupla partirLista() {
         ListaDupla lista2 = new ListaDupla();
 

@@ -26,7 +26,7 @@ public class MenuPrincipalDupla {
                     valor = scan.nextInt();
                     pesqNo = lista.pesquisarNo(valor);
                     if (pesqNo == null)
-                        System.out.println("o " + valor + " n�o foi achado");
+                        System.out.println("o " + valor + " não foi achado");
                     else
                         System.out.println("o " + pesqNo.getInfo().getChave() +
                                 " foi achado na lista");
@@ -35,12 +35,12 @@ public class MenuPrincipalDupla {
                     System.out.println("Digite um valor");
                     valor = scan.nextInt();
                     if (lista.removerNo(valor))
-                        System.out.println("remo��o efetuada");
+                        System.out.println("remoção efetuada");
                     else
-                        System.out.println("remo��o n�o efetuada");
+                        System.out.println("remoção não efetuada");
                     break;
                 case '4':
-                    System.out.println("Exibir a lista\n" + lista.toString());
+                    System.out.println("Exibir a lista \n" + lista.toString());
                     break;
                 case '5':
                     System.out.println("fim do programa");
@@ -50,11 +50,11 @@ public class MenuPrincipalDupla {
     }
 
     public static char menu() {
-        System.out.println("Escolha uma Op��o:\n" +
-                "1. Inserir N� no fim\n" +
-                "2. Localizar N�\n" +
-                "3. Excluir N�\n" +
-                "4. Exibir lista\n" +
+        System.out.println("Escolha uma Opção: \n" +
+                "1. Inserir Nó no fim \n" +
+                "2. Localizar Nó \n" +
+                "3. Excluir Nó \n" +
+                "4. Exibir lista \n" +
                 "5. Sair");
         return scan.next().charAt(0);
     }
