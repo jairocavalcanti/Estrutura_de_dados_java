@@ -169,7 +169,7 @@ public class ListaDupla {
         return maior;
     }
 
-    // metodo para obter media aritmetica com valores da lista
+    // metodo para obter media aritmética com valores da lista
     public int mediaaritmetica() {
         if (this.prim == null) {
             return -1;
@@ -185,6 +185,28 @@ public class ListaDupla {
         }
         int media = soma / soma_2;
         return media;
+    }
+
+    // meotodo para remover valores iguais a zero
+    public void retirar_0(){
+        int cont = 0;
+        if(this.prim == null){
+            System.out.println("A lista está vazia");
+        }
+        NoDupla atual = prim.getProx();
+        while(atual != null){
+            if(atual.getInfo().getChave() == 0){
+                removerNo(atual.getInfo().getChave());
+                cont++;      
+            }
+            atual = atual.getProx();
+        }
+        System.out.println("Quantidade de zeros removidos  - #" + cont);
+    }
+
+    // escreva um método que retira os valores repetidos de uma lista duplamente encadeada
+    public void retirar_repetidos(){
+        
     }
 
 }
