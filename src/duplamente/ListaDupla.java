@@ -152,20 +152,39 @@ public class ListaDupla {
         return lista2;
     }
 
+    // metodo para obter maior elemento da lista
     public int maiorElemento() {
-		if (prim == null) {
-			return -1;
-		}
-		int maior = prim.getInfo().getChave();
-		NoDupla atual = prim.getProx();
+        if (prim == null) {
+            return -1;
+        }
+        int maior = prim.getInfo().getChave();
+        NoDupla atual = prim.getProx();
 
-		while (atual != null) {
-			if (atual.getInfo().getChave() > maior) {
-				maior = atual.getInfo().getChave();
-			}
-			atual = atual.getProx();
-		}
-		return maior;
-	}
+        while (atual != null) {
+            if (atual.getInfo().getChave() > maior) {
+                maior = atual.getInfo().getChave();
+            }
+            atual = atual.getProx();
+        }
+        return maior;
+    }
+
+    // metodo para obter media aritmetica com valores da lista
+    public int mediaaritmetica() {
+        if (this.prim == null) {
+            return -1;
+        }
+        NoDupla atual = prim.getProx();
+        int soma = 0;
+        int soma_2 = 0;
+
+        while (atual != null) {
+            soma += atual.getInfo().getChave();
+            atual = atual.getProx();
+            soma_2++;
+        }
+        int media = soma / soma_2;
+        return media;
+    }
 
 }
