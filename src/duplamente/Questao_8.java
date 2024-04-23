@@ -2,6 +2,11 @@ package duplamente;
 
 import dados.Item;
 
+/*
+ Implemente um método que retorne o maior elemento/valor em uma lista duplamente
+ encadeada, não se sabe o estado da lista.
+*/
+
 public class Questao_8 {
     public static void main(String[] args) {
        ListaDupla listaDupla = new ListaDupla();
