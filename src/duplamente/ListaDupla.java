@@ -111,13 +111,13 @@ public class ListaDupla {
     }
 
     // Outra forma de concatenar listas
-    public void concatenarListas_02(ListaDupla lista2){
+    public void concatenarListas_02(ListaDupla lista2) {
 
-        if(lista2.prim != null){
+        if (lista2.prim != null) {
 
-            if(this.ult != null){
+            if (this.ult != null) {
                 this.ult.setProx(lista2.prim);
-            }else{
+            } else {
                 this.prim = lista2.prim;
             }
 
@@ -125,9 +125,9 @@ public class ListaDupla {
             this.quantNos += lista2.quantNos;
 
             lista2.prim = null;
-			lista2.ult = null;
-			lista2.quantNos = 0;
-        }else{
+            lista2.ult = null;
+            lista2.quantNos = 0;
+        } else {
             System.out.println("Lista 2 está vazia! ");
         }
     }
@@ -151,5 +151,21 @@ public class ListaDupla {
         this.quantNos = this.quantNos / 2;
         return lista2;
     }
+
+    public int maiorElemento() {
+		if (prim == null) {
+			return -1;
+		}
+		int maior = prim.getInfo().getChave();
+		NoDupla atual = prim.getProx();
+
+		while (atual != null) {
+			if (atual.getInfo().getChave() > maior) {
+				maior = atual.getInfo().getChave();
+			}
+			atual = atual.getProx();
+		}
+		return maior;
+	}
 
 }
