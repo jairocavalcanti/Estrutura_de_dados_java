@@ -227,4 +227,23 @@ public class ListaDupla {
         System.out.println("Quantidade de numeros iguais removidos - #" + cont);
     }
 
+    // Implemente um método para mostrar os nomes dos
+    // atletas com altura maior que 2 metros.
+    public void mostrar_nomes() {
+        int cont = 0;
+        if (this.prim == null) {
+            System.out.println("A lista está vazia !");
+            return;
+        }
+        NoDupla atual = this.prim;
+        while (atual != null) {
+            if (atual.getInfo().getAltura() > 2) {
+                cont++;
+                System.out.println("#" + (cont) + " - " + atual.getInfo().getNome());
+            }
+            atual = atual.getProx();
+        }
+
+    }
+
 }
