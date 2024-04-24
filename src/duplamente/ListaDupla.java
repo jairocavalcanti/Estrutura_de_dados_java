@@ -188,25 +188,43 @@ public class ListaDupla {
     }
 
     // meotodo para remover valores iguais a zero
-    public void retirar_0(){
+    public void retirar_0() {
         int cont = 0;
-        if(this.prim == null){
+        if (this.prim == null) {
             System.out.println("A lista está vazia");
         }
         NoDupla atual = prim.getProx();
-        while(atual != null){
-            if(atual.getInfo().getChave() == 0){
+        while (atual != null) {
+            if (atual.getInfo().getChave() == 0) {
                 removerNo(atual.getInfo().getChave());
-                cont++;      
+                cont++;
             }
             atual = atual.getProx();
         }
         System.out.println("Quantidade de zeros removidos  - #" + cont);
     }
 
-    // escreva um método que retira os valores repetidos de uma lista duplamente encadeada
-    public void retirar_repetidos(){
-        
+    // escreva um método que retira os valores repetidos de uma lista duplamente
+    // encadeada
+    public void retirar_repetidos() {
+        int cont = 0;
+        if (this.prim == null) {
+            System.out.println("A lista está vazia!");
+            return;
+        }
+        NoDupla atual = prim;
+        while (atual != null) {
+            NoDupla comparador = atual.getProx();
+            while (comparador != null) {
+                if (atual.getInfo().getChave() == comparador.getInfo().getChave()) {
+                    removerNo(comparador.getInfo().getChave());
+                    cont++;
+                }
+                comparador = comparador.getProx();
+            }
+            atual = atual.getProx();
+        }
+        System.out.println("Quantidade de numeros iguais removidos - #" + cont);
     }
 
 }
