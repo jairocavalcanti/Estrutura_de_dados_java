@@ -3,6 +3,8 @@ package dados;
 public class Item {
 	// aqui podem ser declarados outros atributos conforme sua necessidade.
 	private int chave;
+	
+	// atributos criados para resolução da questão 12
 	private String nome;
 	private Double altura;
 	
@@ -11,6 +13,7 @@ public class Item {
 		this.chave = valor;
 	}
 	
+	// construtor criado para resolução da questao 12
 	public Item(String nome, Double altura) {
 		this.nome = nome;
 		this.altura = altura;

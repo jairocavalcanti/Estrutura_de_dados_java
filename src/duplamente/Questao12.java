@@ -2,6 +2,11 @@ package duplamente;
 
 import dados.Item;
 
+/* 
+ Implemente um método para mostrar os nomes dos
+ atletas com altura maior que 2 metros.
+*/ 
+
 public class Questao12 {
 
     public static void main(String[] args) {

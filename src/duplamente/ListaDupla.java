@@ -187,7 +187,7 @@ public class ListaDupla {
         return media;
     }
 
-    // meotodo para remover valores iguais a zero
+    // metodo para remover valores iguais a zero
     public void retirar_0() {
         int cont = 0;
         if (this.prim == null) {
@@ -204,8 +204,7 @@ public class ListaDupla {
         System.out.println("Quantidade de zeros removidos  - #" + cont);
     }
 
-    // escreva um método que retira os valores repetidos de uma lista duplamente
-    // encadeada
+    // metodo para retirar valores repetidos da lista
     public void retirar_repetidos() {
         int cont = 0;
         if (this.prim == null) {
@@ -227,8 +226,7 @@ public class ListaDupla {
         System.out.println("Quantidade de numeros iguais removidos - #" + cont);
     }
 
-    // Implemente um método para mostrar os nomes dos
-    // atletas com altura maior que 2 metros.
+    // metodo para mostrar nome de 'atletas' com mais de 2 metros
     public void mostrar_nomes() {
         int cont = 0;
         if (this.prim == null) {

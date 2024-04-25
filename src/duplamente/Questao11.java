@@ -2,6 +2,11 @@ package duplamente;
 
 import dados.Item;
 
+/*
+ Escreva um método que retira os valores repetidos de 
+ uma lista duplamente encadeada
+*/
+
 public class Questao11 {
     public static void main(String[] args) {
       ListaDupla listadupla = new ListaDupla();
