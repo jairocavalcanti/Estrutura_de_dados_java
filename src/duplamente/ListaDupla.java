@@ -244,4 +244,24 @@ public class ListaDupla {
 
     }
 
+    // metodo para adicionar produtos 'enlatados' (chave maior que 100) em uma nova lista
+    public void enlatados(ListaDupla L1){
+        ListaDupla L2 = new ListaDupla();
+        int cont = 0;
+        if (this.prim == null) {
+            System.out.println("A lista está vazia !");
+            return;
+        }
+        NoDupla atual = this.prim;
+        while(atual != null){
+            if(atual.getInfo().getChave() > 100){
+                L2.inserirUltimo(new Item(atual.getInfo().getChave()));
+                cont++;
+            }
+        atual = atual.getProx();
+        }
+        System.out.println("Enlatados adicionados #" + cont);
+        System.out.println(L2.toString());
+    }
+
 }
