@@ -13,17 +13,17 @@ import dados.Item;
 
 public class Questao13 {
     public static void main(String[] args) {
-      ListaDupla listadupla = new ListaDupla();
-      ListaDupla listadupla2 = new ListaDupla();
+        ListaDupla listadupla = new ListaDupla();
+        ListaDupla listadupla2 = new ListaDupla();
 
-      listadupla.inserirUltimo(new Item(101));
-      listadupla.inserirUltimo(new Item(20));
-      listadupla.inserirUltimo(new Item(306));
-      listadupla.inserirUltimo(new Item(403));
-      
-      System.out.println("\n");
-      listadupla.enlatados(listadupla2);
+        listadupla.inserirUltimo(new Item(150));
+        listadupla.inserirUltimo(new Item(70));
+        listadupla.inserirUltimo(new Item(225));
+        listadupla.inserirUltimo(new Item(102));
+        listadupla.inserirUltimo(new Item(35));
 
+        System.out.println("\n");
+        listadupla.enlatados(listadupla2);
 
     }
 
