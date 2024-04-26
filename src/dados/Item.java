@@ -8,6 +8,7 @@ public class Item {
 	private String nome;
 	private Double altura;
 
+	// atributo criado para resolução da questão 14
 	private char caracter;
 
 	// Construtor de objetos da classe Item
@@ -21,6 +22,7 @@ public class Item {
 		this.altura = altura;
 	}
 
+	// construtor criado para resolução da questão 14
 	public Item(char caracter) {
 		this.caracter = caracter;
 	}

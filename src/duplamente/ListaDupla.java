@@ -265,7 +265,7 @@ public class ListaDupla {
         System.out.println(L2.toString());
     }
 
-
+    // metodo para descobrir se um conjunto de caracteres forma uma palavra palindroma
     public String palindroma() {
         if (this.prim == null) {
             System.out.println("A lista está vazia !");
