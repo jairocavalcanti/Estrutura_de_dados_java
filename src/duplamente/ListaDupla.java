@@ -244,7 +244,8 @@ public class ListaDupla {
 
     }
 
-    // metodo para adicionar produtos 'enlatados' (chave maior que 100) em uma nova lista
+    // metodo para adicionar produtos 'enlatados' (chave maior que 100) em uma nova
+    // lista
     public void enlatados(ListaDupla L1) {
         ListaDupla L2 = new ListaDupla();
         int cont = 0;
@@ -262,6 +263,33 @@ public class ListaDupla {
         }
         System.out.println("Enlatados adicionados #" + cont);
         System.out.println(L2.toString());
+    }
+
+
+    public String palindroma() {
+        if (this.prim == null) {
+            System.out.println("A lista está vazia !");
+            return null;
+        }
+
+        StringBuilder palavra = new StringBuilder();
+        NoDupla atual = this.prim;
+
+        while (atual != null) {
+            palavra.append(atual.getInfo().getCaracter());
+            atual = atual.getProx();
+        }
+
+        String palavraOriginal = palavra.toString();
+        String palavraReversa = palavra.reverse().toString();
+
+        if (palavraOriginal.equals(palavraReversa)) {
+            System.out.println("Palavra palindroma!");
+            return palavraOriginal;
+        } else {
+            System.out.println("Palavra não é palindroma!");
+            return null;
+        }
     }
 
 }
