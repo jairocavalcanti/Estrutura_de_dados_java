@@ -11,6 +11,8 @@ public class Item {
 	// atributo criado para resolução da questão 14
 	private char caracter;
 
+	private boolean decisao;
+
 	// Construtor de objetos da classe Item
 	public Item(int valor) {
 		this.chave = valor;
@@ -25,6 +27,10 @@ public class Item {
 	// construtor criado para resolução da questão 14
 	public Item(char caracter) {
 		this.caracter = caracter;
+	}
+
+	public Item(boolean decisao) {
+		this.decisao = decisao;
 	}
 
 	// Modifica o valor do atributo chave
@@ -61,4 +67,13 @@ public class Item {
 		this.caracter = caracter;
 	}
 
+	public boolean getDecisao() {
+		return decisao;
+	}
+
+	public void setDecisao(boolean decisao) {
+		this.decisao = decisao;
+	}
+
+	
 }
