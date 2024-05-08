@@ -2,7 +2,7 @@
 
 Repositório dedicado ao armazenamento de modificações em código estruturado feitas no curso de ciência da computação pela FAESA.
 
-## ESTRUTURAS DE DADOS APRENDIDAS:
+## ESTRUTURAS DE DADOS VISTAS E PRATICADAS:
 
 ### Lista Simplesmente Encadeada
 
