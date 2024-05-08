@@ -4,13 +4,14 @@ public class Item {
 	// aqui podem ser declarados outros atributos conforme sua necessidade.
 	private int chave;
 
-	// atributos criados para resolução da questão 12
+	// atributos criados para resolução da questão 12 - Duplamente
 	private String nome;
 	private Double altura;
 
-	// atributo criado para resolução da questão 14
+	// atributo criado para resolução da questão 14 - Duplamente
 	private char caracter;
 
+	// atributo criado para resolução da questão 7 - Fila Circular
 	private boolean decisao;
 
 	// Construtor de objetos da classe Item
@@ -18,17 +19,18 @@ public class Item {
 		this.chave = valor;
 	}
 
-	// construtor criado para resolução da questao 12
+	// construtor criado para resolução da questao 12 - Duplamente
 	public Item(String nome, Double altura) {
 		this.nome = nome;
 		this.altura = altura;
 	}
 
-	// construtor criado para resolução da questão 14
+	// construtor criado para resolução da questão 14 - Duplamente
 	public Item(char caracter) {
 		this.caracter = caracter;
 	}
 
+	// construtor criado para resolução da questão 7 - Fila Circular
 	public Item(boolean decisao) {
 		this.decisao = decisao;
 	}
@@ -75,5 +77,4 @@ public class Item {
 		this.decisao = decisao;
 	}
 
-	
 }
