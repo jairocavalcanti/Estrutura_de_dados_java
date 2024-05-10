@@ -9,7 +9,7 @@ public class FilaCircular {
 	private int tras;
 	private int tamanho;
 
-	public FilaCircular(int qte) {// qte � o tamanho do vetor
+	public FilaCircular(int qte) {// qte = tamanho do vetor
 		this.frente = 0;
 		this.tras = 0;
 		this.tamanho = 0;
@@ -73,6 +73,7 @@ public class FilaCircular {
 		return msg;
 	}
 
+	// atividade 06 - questão 01
 	public String retirarnegativos() {
 		int cont = 0;
 		int aux = this.frente;
@@ -89,7 +90,7 @@ public class FilaCircular {
 		return "Valores negativos retirados: " + cont + "\n" ;
 	}
 
-	// atividade 06 - questao 02
+	// atividade 06 - questão 02
 	public int somarFila() {
 		int soma = 0;
 		int aux = this.frente;
@@ -100,7 +101,7 @@ public class FilaCircular {
 		return soma;
 	}
 
-	// atividade 06 - questao 07
+	// atividade 06 - questão 07
 	public String removeralgo(ListaDupla lista) {
 		int cont = 0;
 		int cont2 = 0;
