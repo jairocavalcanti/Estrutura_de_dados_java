@@ -1,6 +1,5 @@
 package filaCircular;
 
-
 import dados.Item;
 import duplamente.ListaDupla;
 
@@ -74,6 +73,22 @@ public class FilaCircular {
 		return msg;
 	}
 
+	public String retirarnegativos() {
+		int cont = 0;
+		int aux = this.frente;
+		int tamanho = this.tamanho;
+		for (int i = 0; i < tamanho; i++) {
+			if (this.info[aux].getChave() <= 0) {
+				this.desenfileirar();
+				cont++;
+			}else{
+                System.out.println("Valor restante #" + i + " " + this.info[aux].getChave());
+			}
+			aux = (++aux % this.info.length);
+		}
+		return "Valores negativos retirados: " + cont + "\n" ;
+	}
+
 	// atividade 06 - questao 02
 	public int somarFila() {
 		int soma = 0;
@@ -85,24 +100,25 @@ public class FilaCircular {
 		return soma;
 	}
 
+	// atividade 06 - questao 07
 	public String removeralgo(ListaDupla lista) {
 		int cont = 0;
 		int cont2 = 0;
 		int aux = this.frente;
-		int tamanhoOriginal = this.tamanho; 
+		int tamanhoOriginal = this.tamanho;
 		for (int i = 0; i < tamanhoOriginal; i++) {
-			if(this.info[aux].getDecisao() != false){
+			if (this.info[aux].getDecisao() != false) {
 				this.desenfileirar();
 				lista.inserirUltimo(this.info[aux]);
 				cont++;
-			    System.out.println("Valor 'true' - #" + cont);
+				System.out.println("Valor 'true' - #" + cont);
 			} else {
 				cont2++;
 				System.out.println("Valor 'false' - #" + cont2);
 			}
 			aux = (++aux % this.info.length);
 		}
-	    System.out.println("-----------------------------------------------");
+		System.out.println("-----------------------------------------------");
 		System.out.println("Lista duplamente encadeada: ");
 		return lista.toString();
 	}
