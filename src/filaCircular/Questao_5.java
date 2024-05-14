@@ -2,6 +2,13 @@ package filaCircular;
 
 import dados.Item;
 
+/*
+  Em um banco financeiro existem pessoas de todas as idades em uma fila de caixa para serem atendidas. 
+  Retire desta fila as pessoas com idade maior e igual a 70 anos e as coloque em uma nova fila. 
+  A fila original deve permanecer com as demais pessoas. Faça um método para alcançar este objetivo usando fila circular. 
+  Considere que existe um atributo chamado idade para verificar a seleção e o tamanho máximo que a fila pode ter é de 100 posições.
+*/
+
 public class Questao_5 {
     
     public static void main(String[] args) {
