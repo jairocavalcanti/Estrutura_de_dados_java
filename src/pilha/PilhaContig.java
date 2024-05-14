@@ -32,7 +32,7 @@ public class PilhaContig {
 			return true;
 		}	
 	}
-	//remove o dado que está no topo da pilha (somente um dado). 
+	//remove o dado que estï¿½ no topo da pilha (somente um dado). 
 	public Item desempilhar(){
 		if (this.eVazia())
 			return null;

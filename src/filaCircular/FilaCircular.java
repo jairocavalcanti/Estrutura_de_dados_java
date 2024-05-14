@@ -2,6 +2,7 @@ package filaCircular;
 
 import dados.Item;
 import duplamente.ListaDupla;
+import pilha.PilhaContig;
 
 public class FilaCircular {
 	private Item[] info;
@@ -82,12 +83,12 @@ public class FilaCircular {
 			if (this.info[aux].getChave() <= 0) {
 				this.desenfileirar();
 				cont++;
-			}else{
-                System.out.println("Valor restante #" + i + " " + this.info[aux].getChave());
+			} else {
+				System.out.println("Valor restante #" + i + " " + this.info[aux].getChave());
 			}
 			aux = (++aux % this.info.length);
 		}
-		return "Valores negativos retirados: " + cont + "\n" ;
+		return "Valores negativos retirados: " + cont + "\n";
 	}
 
 	// atividade 06 - questão 02
@@ -99,6 +100,14 @@ public class FilaCircular {
 			aux = (++aux % this.info.length);
 		}
 		return soma;
+	}
+
+	public void transferir(PilhaContig pilha, FilaCircular fila) {
+		Item item;
+		while (!pilha.eVazia()) {
+			item = pilha.desempilhar();
+			fila.enfileirar(item);
+		}
 	}
 
 	// atividade 06 - questão 07
