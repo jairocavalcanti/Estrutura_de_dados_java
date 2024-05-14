@@ -102,6 +102,7 @@ public class FilaCircular {
 		return soma;
 	}
 
+	// atividade 06 - questão 03
 	public void transferir(PilhaContig pilha, FilaCircular fila) {
 		Item item;
 		while (!pilha.eVazia()) {
@@ -114,19 +115,18 @@ public class FilaCircular {
 	public String removeralgo(ListaDupla lista) {
 		int cont = 0;
 		int cont2 = 0;
-		int aux = this.frente;
 		int tamanhoOriginal = this.tamanho;
 		for (int i = 0; i < tamanhoOriginal; i++) {
-			if (this.info[aux].getDecisao() != false) {
-				this.desenfileirar();
-				lista.inserirUltimo(this.info[aux]);
+			Item item = this.desenfileirar();
+			if (item.getDecisao() != false) {
+				lista.inserirUltimo(item);
 				cont++;
 				System.out.println("Valor 'true' - #" + cont);
 			} else {
+				this.enfileirar(item);
 				cont2++;
 				System.out.println("Valor 'false' - #" + cont2);
 			}
-			aux = (++aux % this.info.length);
 		}
 		System.out.println("-----------------------------------------------");
 		System.out.println("Lista duplamente encadeada: ");
