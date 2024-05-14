@@ -111,6 +111,19 @@ public class FilaCircular {
 		}
 	}
 
+	public void fila_caixa(FilaCircular fila, FilaCircular fila_2){
+	   int tamanhoOriginal = this.tamanho;
+	   for (int i = 0; i < tamanhoOriginal; i++) {
+		    Item item = this.desenfileirar();
+			if(item.getChave() >= 70){
+				fila_2.enfileirar(item);
+			}else{
+				fila.enfileirar(item);
+			}
+	   }
+	}
+
+
 	// atividade 06 - questão 07
 	public String removeralgo(ListaDupla lista) {
 		int cont = 0;
