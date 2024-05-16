@@ -90,5 +90,32 @@ public class PilhaContig {
 			}
 		}
 	}
+
+	//atividade 05 - questao 02 - maneira alternativa
+	public void retirar_maiores_de_10() {
+		if (this.eVazia()) {
+			System.out.println("A fila está vazia.");
+			return;
+		}
 	
+		// Remover elementos maiores que 10
+		PilhaContig aux = new PilhaContig(this.topo);
+		while (!this.eVazia()) {
+			Item item = this.desempilhar();
+			if (item.getChave() <= 10) {
+				aux.empilhar(item);
+			}
+		}
+	
+		// Exibir os elementos restantes
+		System.out.println("Elementos na fila:");
+		while (!aux.eVazia()) {
+			Item item = aux.desempilhar();
+			System.out.println(item.getChave());
+			this.empilhar(item); // Colocar de volta na fila original
+		}
+	}
+
 }
+	
+

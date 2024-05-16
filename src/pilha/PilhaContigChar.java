@@ -32,7 +32,7 @@ public class PilhaContigChar {
 			return true;
 		}	
 	}
-	//remove o dado que está no topo da pilha (somente um dado). 
+	//remove o dado que estï¿½ no topo da pilha (somente um dado). 
 	public ItemChar desempilhar(){
 		if (this.eVazia())
 			return null;
@@ -42,7 +42,7 @@ public class PilhaContigChar {
 		}
 	}	
 	
-	//Atividade 05 - questão 01
+	//Atividade 05 - questï¿½o 01
 	public String inverterPalavra(String palavra) {
 		String invertida = "";
 		//PilhaContigChar pilha = new PilhaContigChar(palavra.length());
@@ -54,10 +54,4 @@ public class PilhaContigChar {
 		}
 		return invertida;
 	}
-	
-	
-	
-	
-	
-
 }
