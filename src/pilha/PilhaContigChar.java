@@ -3,49 +3,55 @@ package pilha;
 import dados.*;
 
 public class PilhaContigChar {
-	private ItemChar [] info;
+	private ItemChar[] info;
 	private int topo;
 
-	public PilhaContigChar(int qte){
+	public PilhaContigChar(int qte) {
 		this.topo = 0;
-		this.info = new ItemChar [qte];
+		this.info = new ItemChar[qte];
 	}
-	public ItemChar getInfo(){
-		return this.info[this.topo-1];
+
+	public ItemChar getInfo() {
+		return this.info[this.topo - 1];
 	}
-	public int getTopo(){
+
+	public int getTopo() {
 		return this.topo;
 	}
-	public boolean eVazia(){
+
+	public boolean eVazia() {
 		return (this.topo == 0);
 	}
-	public boolean eCheia(){
+
+	public boolean eCheia() {
 		return (this.topo == this.info.length);
 	}
-	//inserir um novo dado no topo da pilha.
-	public boolean empilhar (ItemChar elem){
-		if (this.eCheia()) 
+
+	// inserir um novo dado no topo da pilha.
+	public boolean empilhar(ItemChar elem) {
+		if (this.eCheia())
 			return false;
 		else {
-			this.info[this.topo]= elem;
+			this.info[this.topo] = elem;
 			this.topo++;
 			return true;
-		}	
+		}
 	}
-	//remove o dado que est� no topo da pilha (somente um dado). 
-	public ItemChar desempilhar(){
+
+	// remove o dado que est� no topo da pilha (somente um dado).
+	public ItemChar desempilhar() {
 		if (this.eVazia())
 			return null;
-		else{
+		else {
 			this.topo--;
 			return this.info[this.topo];
 		}
-	}	
-	
-	//Atividade 05 - quest�o 01
+	}
+
+	// Atividade 05 - quest�o 01
 	public String inverterPalavra(String palavra) {
 		String invertida = "";
-		//PilhaContigChar pilha = new PilhaContigChar(palavra.length());
+		// PilhaContigChar pilha = new PilhaContigChar(palavra.length());
 		for (int i = 0; i < palavra.length(); i++) {
 			this.empilhar(new ItemChar(palavra.charAt(i)));
 		}
@@ -54,4 +60,29 @@ public class PilhaContigChar {
 		}
 		return invertida;
 	}
+
+	public boolean palavra_inversa(String palavra, String palavra_2) {
+      
+		if(palavra.length() != palavra_2.length()){
+		  return false;
+	    }
+
+		PilhaContigChar pilha = new PilhaContigChar(palavra.length());
+
+		for(int i = 0; i < palavra.length(); i++){
+			pilha.empilhar(new ItemChar(palavra.charAt(i)));
+		}
+
+		String invertida = "";
+        while (!pilha.eVazia()) {
+            invertida += pilha.desempilhar().getChave();
+        }
+
+        return invertida.equals(palavra_2);
+    }
+
+
+
 }
+
+
