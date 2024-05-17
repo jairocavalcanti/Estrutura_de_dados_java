@@ -116,6 +116,28 @@ public class PilhaContig {
 		}
 	}
 
+	public int pilhas_iguais(PilhaContig pilha, PilhaContig pilha_2){
+		Item item, item2;
+		int indicador = 0;
+		if(this.eVazia()){
+			System.out.println("Pilha vazia!");
+			return 0;
+		}
+
+		while(!this.eVazia()){
+			item = pilha.desempilhar();
+			item2 = pilha_2.desempilhar();
+		    if (item.getChave() == item2.getChave()){
+                indicador = 1;
+			}else{
+				break;
+			}
+		
+		}
+	return indicador;
+	}
+
+
 }
 	
 
